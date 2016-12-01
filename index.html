@@ -1,0 +1,385 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>Javascript moderne</title>
+
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/serif.css">
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
+
+
+	<style>
+		.reveal section img {
+			border:none;
+		}
+	</style>
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+
+			<section data-markdown><script type="text/template">
+
+# Javascript moderne
+
+<img data-src="./img/js.png">
+
+			</script></section>
+
+<section>
+			<section data-markdown><script type="text/template">
+
+## Les origines
+
+  - En 1995 dans Netscape
+  - Standardisation en 1996/1997 = ECMAScript
+  - Intéractions simples, formulaires HTML, etc.
+  - Langage objet à prototypes
+  - Typage faible, langage “mou”
+  - Portée des variables par “closures”
+  - Des fonctions et des événements partout !
+
+			</script></section>
+
+			<section data-markdown><script type="text/template">
+
+<img data-src="./img/goodparts.jpg">
+
+*The World's Most Misunderstood Programming Language*
+
+
+[http://javascript.crockford.com/javascript.html](http://javascript.crockford.com/javascript.html)
+
+			</script></section>
+
+			<section data-markdown><script type="text/template">
+
+### Les forces fondamentales du langage
+
+  - Pensé pour la simplicité et la concision
+  - Naturellement asynchrone
+
+```html
+<html>
+	<body onload="console.log( 'chargement de la page terminé' );">
+	</body>
+</html>
+```
+
+```js
+document.addEventListener("load", function(event){
+	console.log(‘chargement de la page terminé’);
+});
+```
+
+			</script></section>
+
+</section>
+<section>
+			<section data-markdown><script type="text/template">
+
+## Usage historique, le dynamisme du Web :
+
+  - Client privilégié de l’API des navigateurs (DOM)
+  - Dynamisme léger dans les pages
+  - Librairies de plus en plus riches
+  - API navigateur également
+  - 2004 : Gmail, une des premières single page application
+  - En 2005/2006 : normalisation de l’objet XHR (-> Ajax)
+  - En 2005/2006 : débuts de la librairie jQuery
+  - Vers 2010 : les frameworks en force !
+
+			</script></section>
+
+			<section>
+
+<h3>La nouvelle génération : des frameworks avancés</h3>
+
+<img width="400" data-src="./img/backbone.png">
+
+<img width="400" data-src="./img/angular.png">
+
+<img width="400" data-src="./img/react.png">
+
+<img width="400" data-src="./img/vue.png">
+
+			</section>
+
+			<section data-markdown><script type="text/template">
+
+### Angular.js
+
+  - Routage puissant (ui-router)
+  - Double data-binding
+  - Vues HTML dynamiques
+  - Composants réutilisables
+  - DOM sémantique et éléments customs
+  - Proximité avec les spécifications en cours de rédaction “Web Components”
+
+			</script></section>
+
+			<section data-markdown><script type="text/template">
+
+[http://jsfiddle.net/HB7LU/9068/](http://jsfiddle.net/HB7LU/9068/)
+
+<img data-src="./img/angular-example.png">
+
+			</script></section>
+
+			<section data-markdown><script type="text/template">
+
+### Les concepts qui ont le vent en poupe
+
+*React, Redux, Vue, Angular 2, etc.*
+
+  - Programmation réactive
+  - MVVM
+  - Gestion centralisée de l'état
+  - "Time travel"
+  - DOM virtuel
+
+			</script></section>
+</section>
+<section>
+			<section data-markdown><script type="text/template">
+
+## Hors du navigateur
+
+*Déjà en 2007*
+
+[http://ejohn.org/blog/the-world-of-ecmascript/](http://ejohn.org/blog/the-world-of-ecmascript/)
+
+<img data-src="./img/ecma.png">
+
+			</script></section>
+
+			<section data-markdown><script type="text/template">
+
+### En 2008 Google passe la vitesse supérieure
+
+<img data-src="./img/chrome.jpg">
+
+<img data-src="./img/v8.png">
+
+			</script></section>
+</section>
+<section>
+			<section>
+
+<h2>L’usage qui explose : les services Web avec node.js</h2>
+
+<img data-src="./img/node.png" width="400">
+
+<img data-src="./img/libuv.png" width="400">
+
+<img data-src="./img/v8.png">
+
+			</section>
+
+			<section data-markdown><script type="text/template">
+
+### Quelques atouts qui font le succès de node.js
+
+  - Langage ancré dans la culture des développeurs Web
+  - Modèle de développement 100% asynchrone et réactif
+  - Taillé pour des usages orientés IO
+  - NPM, modularité, écosystème, etc.
+
+			</script></section>
+
+			<section data-markdown><script type="text/template">
+
+[https://www.packtpub.com/mapt/book/web-development/9781783287314/1/ch01lvl1sec09/The+reactor+pattern](https://www.packtpub.com/mapt/book/web-development/9781783287314/1/ch01lvl1sec09/The+reactor+pattern)
+
+<img data-src="./img/reactor.jpg">
+
+			</script></section>
+
+
+			<section data-markdown><script type="text/template">
+
+### L'inévitable Hello World
+
+```js
+var http = require('http');
+
+http.createServer(function (req, res) {
+  res.writeHead(200, {'Content-Type': 'text/plain'});
+  res.end('Hello World\n');
+}).listen(1337);
+
+console.log('Server running at http://localhost:1337/');
+```
+
+			</script></section>
+
+			<section data-markdown><script type="text/template">
+
+Support bas niveau mais accessible des principaux protocoles du Web (HTTP, WebSockets, TCP, SMTP, etc).
+
+Ceci est un proxy susceptible de tenir la charge:
+
+```js
+var http = require('http');
+var request = require('request');
+
+http.createServer(function(req,res){
+    req.pipe(request(req.url)).pipe(res)
+}).listen(8000);
+```
+
+Une requête HTTP est un évènement déclenché par le système. Voir un flux d’évènements contenant des buffers (“readable stream”).
+
+			</script></section>
+</section>
+			<section data-markdown><script type="text/template">
+
+## Des applications natives
+
+<img data-src="./img/nwvselectron.jpg">
+
+<img data-src="./img/cordova.jpg">
+
+			</script></section>
+
+			<section data-markdown><script type="text/template">
+
+## JavaScript pour l’outillage du développeur:
+
+  - NPM. Gestionnaire de dépendances
+  - Grunt, Gulp, webpack, systemjs, etc. Systèmes de build
+  - LESS. Pré-processeur de CSS
+  - JSHint, ESLint, etc. Analyseurs de code source (important !)
+  - Atom
+  - Browser-sync
+  - Webdriverjs
+  - C'est sans fin
+
+[http://jshint.com/](http://jshint.com/)
+
+			</script></section>
+
+			<section data-markdown><script type="text/template">
+## Javascript et la donnée : JSON
+
+  - “JavaScript Object Notation”
+  - Simple mais complet
+  - Correspondance naturelle avec les modèles objets
+  - Maintenant supporté dans la plupart des langages
+  - Format central de systèmes de bases de données (mongodb, couchdb, etc.) et moteur de recherche (ElasticSearch)
+  - JSON.stringify(...), JSON.parse(...)
+  - JSON-Schema
+
+Une syntaxe sans prétention qui devient la norme des API du Web.
+
+			</script></section>
+
+<section>
+			<section data-markdown><script type="text/template">
+
+## Un language ancré dans le Web et le modèle open source
+
+<img data-src="./img/github.png">
+
+http://githut.info/
+
+			</script></section>
+
+			<section data-markdown><script type="text/template">
+### Collaborer sur github
+
+  - Modèle dominant: fork and pull
+  - Restriction du droit de commit/push
+  - Ouverture du droit de soumettre un ticket et soumettre une modification
+
+Si on ajoute travis-ci on a une usine de build.
+
+Si on ajoute un hébergement cloud : intégration continue sur le Web.
+			</script></section>
+</section>
+
+			<section data-markdown><script type="text/template">
+
+## Usages concrets chez MGDIS
+
+  - Services métiers node.js qui arrivent à maturité
+  - Services techniques “proxy” node.js
+  - Scripts node.js pour automatiser des suites d’appels HTTP
+  - Outillage: Bower, Gulp, JSHint, LESS, Webpack, etc.
+  - Une application d’administration avec NW.js
+  - Dans le code ancien : scripts jQuery intégrés dans des pages HTML classiques
+  - Plus récemment : Widgets jquery-ui réutilisables
+  - Actuellement : modules réutilisables Angular.js et portails développés entièrement dans la même technologie
+  - Modèle de développement avec séparation complète du client Web (Single Page Application) et des serveurs
+  - Échanges et persistances en majorité en JSON avec API REST
+
+			</script></section>
+
+			<section data-markdown><script type="text/template">
+
+## Javascript fatigue
+
+[how-it-feels-to-learn-javascript-in-2016](https://hackernoon.com/how-it-feels-to-learn-javascript-in-2016)
+
+
+**Javascript fatigue fatigue**, [1 article](http://www.2ality.com/2016/02/js-fatigue-fatigue.html), [1 autre](https://hackernoon.com/how-it-feels-to-learn-javascript-in-2016)
+
+*The Cambrian explosion of tools you see around you is what rapid progress looks like when it’s not controlled by an Apple or a Microsoft*
+
+*When in doubt about what to learn next, you can always go back to fundamentals*
+
+			</script></section>
+
+			<section data-markdown><script type="text/template">
+## Merci !
+
+Des questions ?
+			</script></section>
+
+		</div>
+	</div>
+
+	<script src="lib/js/head.min.js"></script>
+	<script src="js/reveal.js"></script>
+
+	<script>
+		// More info https://github.com/hakimel/reveal.js#configuration
+		Reveal.initialize({
+			history: true,
+
+			// More info https://github.com/hakimel/reveal.js#dependencies
+			dependencies: [{
+				src: 'plugin/markdown/marked.js'
+			}, {
+				src: 'plugin/markdown/markdown.js'
+			}, {
+				src: 'plugin/notes/notes.js',
+				async: true
+			}, {
+				src: 'plugin/highlight/highlight.js',
+				async: true,
+				callback: function() {
+					hljs.initHighlightingOnLoad();
+				}
+			}]
+		});
+	</script>
+</body>
+
+</html>
