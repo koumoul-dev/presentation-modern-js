@@ -1,4 +1,4 @@
-Presentation can be viewed [here](https://koumoul-dev.github.io/presentation-woa/)
+Presentation can be viewed [here](https://koumoul-dev.github.io/presentation-modern-js/)
 
 This presentation is made with [reveal.js](http://lab.hakim.se/reveal-js/#/)
 
